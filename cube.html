@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正方体</title>
+</head>
+<style type="text/css">
+   html{ height: 100%; background-image: linear-gradient(pink 20%,yellow 80%);}
+   body{-webkit-perspective: 1000px; color: #fff;}
+	.zhengfangxing{width: 300px;height: 300px;position: relative;transform-style: preserve-3d;animation:   rotate 30s  infinite linear alternate;margin:200px auto;font-size: 30px;line-height: 300px; text-align: center;}
+
+	@keyframes rotate{0%{} 100%{transform: rotateX(360deg) rotateY(360deg);}}
+
+	.zhengfangxing div{width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.3);transition: 3s;;        position: absolute;left: 0; top: 0;}
+
+	.qm{transform: translateZ(150px);}
+	.hm{transform: translateZ(-150px);}
+	.zm{transform: translateX(150px) rotateY(90deg);}
+	.ym{transform: rotateY(90deg) translateZ(-150px) ;}
+	.sm{transform: rotateX(90deg) translateZ(150px);}
+	.xm{transform: rotateX(90deg) translateZ(-150px);}
+	.zhengfangxing:hover .qm{transform: translateZ(200px);}
+	.zhengfangxing:hover .hm{transform: translateZ(-200px);}
+	.zhengfangxing:hover .zm{transform: translateX(200px) rotateY(90deg);}
+	.zhengfangxing:hover .ym{transform: rotateY(90deg) translateZ(-200px);}
+	.zhengfangxing:hover .sm{transform: rotateX(90deg) translateZ(200px);}
+	.zhengfangxing:hover .xm{transform: rotateX(90deg) translateZ(-200px);}
+
+	.zhengfangxing p{width: 150px;height: 150px;line-height: 150px;	position: absolute; left: 0;top: 0;    right: 0;bottom: 0; margin:auto; background-color:rgba(243,170,178,.5);text-align:     center; font-size: 22px; transition: 5s;}
+
+	.q{transform: translateZ(75px) ;}
+	.h{transform: translateZ(-75px);}
+	.z{transform: translateX(75px) rotateY(90deg);}
+	.y{transform: rotateY(90deg) translateZ(-75px);}
+	.s{transform: rotateX(90deg) translateZ(75px);}
+	.x{transform: rotateX(90deg) translateZ(-75px);}
+	.zhengfangxing:hover .q{transform: translateZ(100px);}
+	.zhengfangxing:hover .h{transform: translateZ(-100px);}
+	.zhengfangxing:hover .z{transform: translateX(100px) rotateY(90deg);}
+	.zhengfangxing:hover .y{transform: rotateY(90deg) translateZ(-100px);}
+	.zhengfangxing:hover .s{transform: rotateX(90deg) translateZ(100px);}
+	.zhengfangxing:hover .x{transform: rotateX(90deg) translateZ(-100px);}
+</style>
+<body>
+<div class="zhengfangxing">
+	<div class="qm">前面</div>
+	<div class="hm">后面</div>
+	<div class="zm">左面</div>
+	<div class="ym">右面</div>
+	<div class="sm">上面</div>
+	<div class="xm">下面</div>
+
+	<p class="q">前</p>
+	<p class="h">后</p>
+	<p class="z">左</p>
+	<p class="y">右</p>
+	<p class="s">上</p>
+	<p class="x">下</p>
+</div>
+</body>
+</html>
